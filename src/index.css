@@ -1,0 +1,346 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* AL-MOHRA Brand Colors - Wood & Gold Palette */
+    --background: 30 15% 98%;
+    --foreground: 30 10% 11%;
+
+    --card: 30 20% 97%;
+    --card-foreground: 30 10% 11%;
+
+    --popover: 30 20% 97%;
+    --popover-foreground: 30 10% 11%;
+
+    /* Primary - Dark Wood Brown */
+    --primary: 25 25% 19%;
+    --primary-foreground: 30 15% 98%;
+
+    /* Secondary - Light Wood/Beige */
+    --secondary: 30 30% 85%;
+    --secondary-foreground: 25 25% 19%;
+
+    --muted: 30 25% 90%;
+    --muted-foreground: 30 10% 40%;
+
+    /* Accent - Yellow */
+    --accent: 60 100% 50%;
+    --accent-foreground: 30 10% 11%;
+    
+    /* Accent Hover - Gold */
+    --accent-hover: 45 50% 53%;
+    --accent-hover-foreground: 30 10% 11%;
+
+    /* Wood Brown - Mid tone */
+    --wood: 25 30% 28%;
+    --wood-foreground: 30 15% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 45 50% 53%;
+
+    --radius: 1rem;
+
+    /* Custom Design Tokens */
+    --gradient-wood: linear-gradient(135deg, hsl(25 30% 28%), hsl(25 25% 19%));
+    --gradient-gold: linear-gradient(135deg, hsl(60 100% 50%), hsl(60 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 25% 19% / 0.9), hsl(25 30% 28% / 0.8));
+    
+    --shadow-elegant: 0 10px 40px -10px hsl(25 25% 19% / 0.2);
+    --shadow-gold: 0 0 30px hsl(60 100% 50% / 0.3);
+    --shadow-card: 0 4px 20px hsl(25 25% 19% / 0.1);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Light mode navbar transparency */
+    --navbar-bg-scrolled: hsl(25 25% 19% / 0.6);
+    --navbar-blur: backdrop-blur-lg;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 20% 20%;
+    --foreground: 30 15% 95%;
+
+    --card: 25 15% 22%;
+    --card-foreground: 30 15% 95%;
+
+    --popover: 30 10% 8%;
+    --popover-foreground: 30 15% 95%;
+
+    --primary: 30 15% 95%;
+    --primary-foreground: 25 25% 19%;
+
+    --secondary: 30 10% 22%;
+    --secondary-foreground: 30 15% 95%;
+
+    --muted: 30 10% 22%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 60 100% 60%;
+    --accent-foreground: 30 10% 6%;
+    
+    /* Accent Hover - Gold */
+    --accent-hover: 45 55% 60%;
+    --accent-hover-foreground: 30 10% 6%;
+
+    --wood: 25 20% 20%;
+    --wood-foreground: 30 15% 95%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 15%;
+    --input: 30 10% 15%;
+    --ring: 45 55% 60%;
+
+    --gradient-wood: linear-gradient(135deg, hsl(25 20% 20%), hsl(30 10% 8%));
+    --gradient-gold: linear-gradient(135deg, hsl(60 100% 60%), hsl(60 100% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 10% 6% / 0.95), hsl(25 20% 20% / 0.9));
+    
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 0 30px hsl(60 100% 60% / 0.4);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    
+    /* Dark mode navbar transparency */
+    --navbar-bg-scrolled: hsl(30 10% 6% / 0.6);
+    --navbar-blur: backdrop-blur-lg;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent;
+  }
+
+  .hover-gold {
+    transition: color 0.3s ease;
+  }
+  
+  .hover-gold:hover {
+    color: hsl(var(--accent-hover));
+  }
+
+  /* Fixed hero gold independent of --accent */
+  .text-hero-gold {
+    color: hsl(45 50% 53%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Scrolling animations for company logos */
+  @keyframes scroll-ltr {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-rtl {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll-ltr 30s linear infinite;
+  }
+
+  .animate-scroll-ltr {
+    animation: scroll-ltr 30s linear infinite;
+  }
+
+  .animate-scroll-rtl {
+    animation: scroll-rtl 30s linear infinite;
+  }
+
+  /* Highlight pulse for targeted service card */
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--accent-hover) / 0.5), 0 0 0 0 hsl(var(--accent-hover) / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 0 8px hsl(var(--accent-hover) / 0.25), 0 0 0 14px hsl(var(--accent-hover) / 0.12);
+    }
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--accent-hover) / 0);
+    }
+  }
+
+  .highlight-pulse {
+    animation: glowPulse 1.6s ease-out 0s 2;
+  }
+
+  /* Shimmer effect for loading screen */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  /* Glow pulse animation for loading screen title */
+  @keyframes glowPulseTitle {
+    0%, 100% {
+      text-shadow: 
+        0 0 20px hsl(45 50% 53% / 0.6),
+        0 0 40px hsl(45 50% 53% / 0.4),
+        0 0 60px hsl(45 50% 53% / 0.2);
+    }
+    50% {
+      text-shadow: 
+        0 0 30px hsl(45 50% 53% / 0.9),
+        0 0 60px hsl(45 50% 53% / 0.7),
+        0 0 90px hsl(45 50% 53% / 0.5),
+        0 0 120px hsl(45 50% 53% / 0.3);
+    }
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulseTitle 2s ease-in-out infinite;
+  }
+
+  /* Glow orb animation for background light effect */
+  @keyframes glowOrb {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+      filter: blur(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+      filter: blur(25px);
+    }
+  }
+
+  .animate-glow-orb {
+    animation: glowOrb 3s ease-in-out infinite;
+  }
+
+  /* Stroke sweep for SVG text outline */
+  @keyframes strokeSweep {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -720;
+    }
+  }
+
+  .animate-stroke-sweep {
+    stroke-dasharray: 120 600;
+    animation: strokeSweep 3s linear infinite;
+  }
+
+  /* Responsive SVG text for mobile */
+  @media (max-width: 640px) {
+    svg text {
+      font-size: 70px !important;
+      stroke-width: 2 !important;
+      letter-spacing: 2px !important;
+    }
+    svg text.animate-stroke-sweep {
+      stroke-width: 2.2 !important;
+    }
+  }
+}

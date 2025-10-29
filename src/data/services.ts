@@ -1,0 +1,121 @@
+export interface ServiceItem {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+}
+
+export interface ServiceCategory {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  items: ServiceItem[];
+}
+
+export const serviceCategories: ServiceCategory[] = [
+  {
+    id: 'designs',
+    nameEn: 'Designs',
+    nameAr: 'التصاميم',
+    items: [
+      { id: 'villa-interior', nameEn: 'Villa Interior Design', nameAr: 'تصميم داخلي للفيلا' },
+      { id: 'home-interior', nameEn: 'Home Interior Design', nameAr: 'تصميم داخلي للمنزل' },
+      { id: 'exterior-design', nameEn: 'Exterior Design', nameAr: 'تصميم خارجي' },
+      { id: 'kitchen-design', nameEn: 'Kitchen Design', nameAr: 'تصميم المطابخ' },
+      { id: 'bathroom-design', nameEn: 'Bathroom Design', nameAr: 'تصميم الحمامات' },
+      { id: 'living-design', nameEn: 'Living Room Design', nameAr: 'تصميم غرفة المعيشة' },
+      { id: 'bedroom-design', nameEn: 'Bedroom Design', nameAr: 'تصميم غرف النوم' },
+      { id: 'office-design', nameEn: 'Office Design', nameAr: 'تصميم المكتب' },
+      { id: 'restaurant-design', nameEn: 'Restaurant Design', nameAr: 'تصميم المطاعم' },
+      { id: 'hotel-design', nameEn: 'Hotel Design', nameAr: 'تصميم الفنادق' },
+      { id: 'retail-design', nameEn: 'Retail Design', nameAr: 'تصميم المحلات التجارية' },
+      { id: 'salon-design', nameEn: 'Beauty Salon Design', nameAr: 'تصميم صالونات التجميل' },
+      { id: 'clinic-design', nameEn: 'Clinic Design', nameAr: 'تصميم العيادات' },
+      { id: 'majlis-design', nameEn: 'Majlis Design', nameAr: 'تصميم المجالس' },
+      { id: 'kids-design', nameEn: 'Kids Room Design', nameAr: 'تصميم غرف الأطفال' },
+      { id: 'closet-design', nameEn: 'Walk-in Closet Design', nameAr: 'تصميم غرف الملابس' },
+      { id: 'dining-design', nameEn: 'Dining Room Design', nameAr: 'تصميم غرفة الطعام' },
+      { id: 'family-lounge', nameEn: 'Family Lounge Design', nameAr: 'تصميم غرفة الجلوس العائلية' },
+      { id: 'entrance-design', nameEn: 'Entrance Design', nameAr: 'تصميم المداخل' },
+      { id: 'pool-design', nameEn: 'Pool Design', nameAr: 'تصميم حمامات السباحة' },
+      { id: 'sauna-design', nameEn: 'Sauna Design', nameAr: 'تصميم الساونا' },
+      { id: 'flooring-design', nameEn: 'Flooring Design', nameAr: 'تصميم الأرضيات' },
+      { id: 'home-cinema', nameEn: 'Home Cinema Design', nameAr: 'تصميم السينما المنزلية' },
+      { id: 'project-management', nameEn: 'Project Management', nameAr: 'إدارة المشاريع والاستشارات الهندسية' },
+    ],
+  },
+  {
+    id: 'finishing',
+    nameEn: 'Finishing',
+    nameAr: 'التشطيبات',
+    items: [
+      { id: 'villa-finishing', nameEn: 'Villa Finishing', nameAr: 'تشطيب الفلل' },
+      { id: 'apartment-finishing', nameEn: 'Apartment Finishing', nameAr: 'تشطيب الشقق' },
+      { id: 'office-fitout', nameEn: 'Office Fit-out', nameAr: 'تجهيز المكاتب' },
+      { id: 'retail-fitout', nameEn: 'Retail Fit-out', nameAr: 'تجهيز المحلات التجارية' },
+      { id: 'restaurant-fitout', nameEn: 'Restaurant Fit-out', nameAr: 'تجهيز المطاعم' },
+      { id: 'interior-fitout', nameEn: 'Interior Fit-out', nameAr: 'التجهيز الداخلي' },
+      { id: 'marble-installation', nameEn: 'Marble Installation', nameAr: 'تركيب الرخام والجرانيت' },
+      { id: 'gypsum-works', nameEn: 'Gypsum Works', nameAr: 'أعمال الجبس' },
+      { id: 'tile-ceramic', nameEn: 'Tile & Ceramic', nameAr: 'تركيب البلاط والسيراميك' },
+      { id: 'painting', nameEn: 'Painting & Coating', nameAr: 'أعمال الدهان والطلاء' },
+      { id: 'mep-works', nameEn: 'MEP Works', nameAr: 'أعمال السباكة والكهرباء والميكانيكا' },
+      { id: 'plumbing', nameEn: 'Plumbing Works', nameAr: 'أعمال السباكة' },
+      { id: 'electrical', nameEn: 'Electrical Works', nameAr: 'أعمال الكهرباء' },
+      { id: 'metal-works', nameEn: 'Metal Works', nameAr: 'أعمال الحدادة' },
+      { id: 'glass-aluminum', nameEn: 'Glass & Aluminum', nameAr: 'أعمال الزجاج والألمنيوم' },
+      { id: 'roofing', nameEn: 'Roofing', nameAr: 'أعمال التسقيف' },
+      { id: 'wallpaper', nameEn: 'Wallpaper', nameAr: 'ورق الجدران' },
+      { id: 'curtains', nameEn: 'Curtains', nameAr: 'الستائر' },
+      { id: 'lighting-installations', nameEn: 'Lighting Installations', nameAr: 'تركيبات الإضاءة' },
+      { id: 'artificial-grass', nameEn: 'Artificial Grass', nameAr: 'العشب الصناعي' },
+    ],
+  },
+  {
+    id: 'furniture',
+    nameEn: 'Furniture',
+    nameAr: 'الأثاث',
+    items: [
+      { id: 'living-room', nameEn: 'Living Room Furniture', nameAr: 'أثاث غرفة المعيشة' },
+      { id: 'bedroom', nameEn: 'Bedroom Furniture', nameAr: 'أثاث غرف النوم' },
+      { id: 'kitchen', nameEn: 'Kitchen Furniture', nameAr: 'أثاث المطبخ' },
+      { id: 'dining-room', nameEn: 'Dining Room Furniture', nameAr: 'أثاث غرفة الطعام' },
+      { id: 'bathroom', nameEn: 'Bathroom Furniture', nameAr: 'أثاث الحمام' },
+      { id: 'kids-room', nameEn: 'Kids Room Furniture', nameAr: 'أثاث غرف الأطفال' },
+      { id: 'office', nameEn: 'Office Furniture', nameAr: 'أثاث المكتب' },
+      { id: 'walk-in-closets', nameEn: 'Walk-in Closets', nameAr: 'غرف الملابس' },
+      { id: 'outdoor-furniture', nameEn: 'Outdoor Furniture', nameAr: 'الأثاث الخارجي' },
+      { id: 'lighting', nameEn: 'Lighting', nameAr: 'الإضاءة' },
+      { id: 'carpets', nameEn: 'Carpets & Rugs', nameAr: 'السجاد والموكيت' },
+      { id: 'accessories', nameEn: 'Accessories', nameAr: 'الإكسسوارات والديكورات' },
+    ],
+  },
+  {
+    id: 'landscaping',
+    nameEn: 'Landscaping',
+    nameAr: 'التنسيق الخارجي',
+    items: [
+      { id: 'swimming-pools', nameEn: 'Swimming Pools', nameAr: 'أحواض السباحة' },
+      { id: 'pool-designs', nameEn: 'Pool Designs', nameAr: 'تصاميم أحواض السباحة' },
+      { id: 'infinity-pools', nameEn: 'Infinity Pools', nameAr: 'أحواض السباحة اللانهائية' },
+      { id: 'pool-construction', nameEn: 'Pool Construction', nameAr: 'إنشاء أحواض السباحة' },
+      { id: 'pool-maintenance', nameEn: 'Pool Maintenance', nameAr: 'صيانة أحواض السباحة' },
+      { id: 'jacuzzi', nameEn: 'Jacuzzi', nameAr: 'الجاكوزي' },
+      { id: 'irrigation', nameEn: 'Automatic Irrigation', nameAr: 'أنظمة الري التلقائي' },
+      { id: 'bbq-areas', nameEn: 'BBQ Areas', nameAr: 'مناطق الشواء' },
+      { id: 'outdoor-seating', nameEn: 'Outdoor Seating', nameAr: 'المقاعد الخارجية' },
+      { id: 'hardscape', nameEn: 'Hardscape Design', nameAr: 'تصميم الهارد سكيب' },
+      { id: 'softscape', nameEn: 'Softscape Design', nameAr: 'تصميم السوفت سكيب' },
+      { id: 'water-features', nameEn: 'Water Features', nameAr: 'النوافير والمياه الزخرفية' },
+      { id: 'garden-lighting', nameEn: 'Garden Lighting', nameAr: 'إضاءة الحدائق' },
+      { id: 'fire-pits', nameEn: 'Fire Pits', nameAr: 'حفر النار' },
+      { id: 'outdoor-fireplace', nameEn: 'Outdoor Fireplace', nameAr: 'المدفأة الخارجية' },
+      { id: 'outdoor-kitchens', nameEn: 'Outdoor Kitchens', nameAr: 'المطابخ الخارجية' },
+      { id: 'outdoor-living', nameEn: 'Outdoor Living Rooms', nameAr: 'غرف المعيشة الخارجية' },
+      { id: 'planters', nameEn: 'Outdoor Planters', nameAr: 'أوعية النباتات الخارجية' },
+      { id: 'pergolas', nameEn: 'Pergolas & Gazebos', nameAr: 'البرجولات والمظلات' },
+      { id: 'seating-areas', nameEn: 'Seating Areas', nameAr: 'مناطق الجلوس' },
+      { id: 'interlock', nameEn: 'Interlock & Paving', nameAr: 'بلاط الإنترلوك والرصف' },
+      { id: 'building-maintenance', nameEn: 'Building Maintenance', nameAr: 'صيانة المباني' },
+    ],
+  },
+];
